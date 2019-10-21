@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="container">
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+	</div>
+</body>
+<script type="text/javascript">
+	
+	// var arr = [1,2,3,4,5];
+
+	// var oP = document.getElementsByTagName("p");
+	// console.log(oP);
+
+	// for (var i = 0; i < oP.length; i--) {
+	// 	oP[i].innerText = arr[i]
+	// }
+
+	function parent(){
+		this.a =1;
+		this.b=[1,2,this.a]
+		this.c={
+			demo:5
+		}
+		this.show=function(){
+			console.log(this.a,this.b,this.c.demo)
+		}
+	}
+
+	function child(){
+		this.a =2;
+		this.change=function(){
+			this.b.push(this.a)
+			this.a=this.b.length;
+			this.c.demo = this.a++;
+		}
+	}
+
+	child.prototype = new parent()
+
+	var parent = new parent();
+	var child1 = new child();
+	var child2 = new child();
+
+	child1.a=11;
+	child2.a=12;
+	parent.show()
+	child1.show()
+	child2.show()
+	child1.change()//无输出值 运算
+	child2.change()//无输出值 运算
+	parent.show()
+	child1.show()
+	child2.show()
+</script>
+</html>

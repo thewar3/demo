@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>for</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	
+	//  矩形   外层循环一次  内层循环一遍
+	for (var i = 0; i < 5; i++) {//  外层循环控制行
+	   	for (var j = 0; j < 6; j++) {//内层循环控制列--一行的个数
+	   		document.write(" * ") 		   		
+   		}
+   		document.write(" <br/> ") 	
+   }
+
+
+   /*
+	  
+	*****
+	****
+	***
+	**
+	*
+	 
+	*/
+
+	var z = 5;
+	for (var i = 0; i < 5; i++) {//  外层循环控制行
+	   	for (var j = 0; j < z; j++) {//内层循环控制列--一行的个数
+	   		document.write(" * ") 		   		
+   		}
+   		z--;
+   		document.write(" <br/> ") 	
+   }
+
+	document.write(" <hr/> ") 	
+
+   var z = 0;
+	for (var i = 0; i < 5; i++) {//  外层循环控制行
+	   	for (var j = z; j < 5; j++) {//内层循环控制列--一行的个数
+	   		document.write(" * ") 		   		
+   		}
+   		z++;
+   		document.write(" <br/> ") 	
+   }
+
+   document.write(" <hr/> ") 	
+   //观察z与i的关系
+   // var z = 0;
+	for (var i = 0; i < 5; i++) {//  外层循环控制行
+	   	for (var j = i; j < 5; j++) {//内层循环控制列--一行的个数
+	   		document.write(" * ") 		   		
+   		}
+   		// z++;
+   		document.write(" <br/> ") 	
+   }
+
+
+
+   /*
+		  
+		  
+	*
+	**
+	***
+	****
+	*****
+	
+	*/
+
+	 document.write(" <hr/> ") 	
+  
+	for (var i = 0; i < 5; i++) {//  外层循环控制行
+	   	for (var j = 0; j <= i; j++) {//内层循环控制列--一行的个数
+	   		document.write(" * ") 		   		
+   		}
+   		
+   		document.write(" <br/> ") 	
+   }
+
+
+
+
+
+	/*
+	1
+	22
+	333
+	4444
+	55555
+	*/
+
+		 document.write(" <hr/> ") 	
+  
+		for (var i = 0; i < 5; i++) {//  外层循环控制行
+		   	for (var j = 0; j <= i; j++) {//内层循环控制列--一行的个数
+		   		document.write(i+1) 		   		
+	   		}
+	   		
+	   		document.write(" <br/> ") 	
+	   }
+
+
+
+
+	/*
+	54321
+	5432
+	543
+	54
+	5
+	*/
+
+		document.write(" <hr/> ") 	
+	   
+		for (var i = 1; i <= 5; i++) {//  外层循环控制行
+		   	for (var j = 5; j >= i; j--) {//内层循环控制列--一行的个数
+		   		document.write(j) 		   		
+	   		}
+	   		
+	   		document.write(" <br/> ") 	
+	   }
+
+
+
+
+
+	// 九九乘法表
+
+	 document.write(" <hr/> ") 	
+  
+	for (var i = 1; i <= 9; i++) {//  外层循环控制行
+	   	for (var j = 1; j <= i; j++) {//内层循环控制列--一行的个数
+	   		document.write(j+" * "+i+" = "+j*i+"\t") 		   		
+   		}
+   		
+   		document.write(" <br/> ") 	
+   }
+
+
+
+   //转义字符   \    \\   \    \t  \r\n 回车换行   、\b  退格  
+   document.write("\\abc\b") 	
+
+   
+
+
+</script>
+</html>
